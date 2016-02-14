@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main"
+    android:padding="5dp" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_blue_rounded_toplr"
+        android:onClick="oneClickBuy"
+        android:text="Buy and Fill in later"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:background="@drawable/btn_blue_roundedbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Take Photo"
+            android:onClick="takePhotoAndPurchase"
+            android:src="@drawable/ic_photo"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="5dp"
+             />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:background="@drawable/btn_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Write Note"
+            android:onClick="makeNoteAndPurchase"
+            android:src="@drawable/ic_note"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="5dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:background="@drawable/btn_blue_roundedbr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Take Photo"
+            android:onClick="recordSoundAndPurchase"
+            android:src="@drawable/ic_sound"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+       		 />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/MainScreenIncomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_rounded_left"
+            android:onClick="startEnterItemScreen"
+            android:tag="INCOME"
+            android:text="INCOME"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/MainScreenExpenseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_blue_rounded_right"
+            android:onClick="startEnterItemScreen"
+            android:tag="EXPENSE"
+            android:text="EXPENSE"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/textbox"
+        android:layout_marginTop="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp" >
+
+        <TextView
+            android:id="@+id/MainScreenIncomeTodayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/MainScreenMoneySpentTodayLabel"
+            android:text="Money In Today:"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+             />
+
+        <TextView
+            android:id="@+id/MainsScreenDifferenceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/MainScreenIncomeTodayLabel"
+            android:text="Net:"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:textStyle="bold"/>
+
+         <TextView
+             android:id="@+id/MainScreenSpent"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:text="$54.56  "
+             android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+         <TextView
+             android:id="@+id/MainScreenIncome"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_below="@+id/MainScreenSpent"
+             android:text="$60.34  "
+             android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+         <TextView
+             android:id="@+id/MainScreenDifference"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_below="@+id/MainScreenIncome"
+             android:text="$60.34  "
+             android:textAppearance="?android:attr/textAppearanceMediumInverse"
+             android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/MainScreenBalance"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_below="@+id/MainScreenDifference"
+             android:text="$1043.00"
+             android:textAppearance="?android:attr/textAppearanceMediumInverse"
+             android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/MainScreenMoneySpentTodayLabel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:text="Money Spent Today: "
+             android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+         <TextView
+             android:id="@+id/MainScreenbalanceLabel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignLeft="@+id/MainsScreenDifferenceLabel"
+             android:layout_below="@+id/MainsScreenDifferenceLabel"
+             android:text="Balance     "
+             android:textAppearance="?android:attr/textAppearanceMediumInverse"
+             android:textStyle="bold" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

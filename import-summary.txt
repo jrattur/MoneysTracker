@@ -1,0 +1,88 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* Nomadic Monkey Journal.odt
+* Releases\
+* Releases\moneys201113.apk
+* Releases\moneys221113.apk
+* Releases\moneys_v3_041213.apk
+* Source Backups\
+* Source Backups\Moneys V2\
+* Source Backups\Moneys V2\moneys\
+* Source Backups\Moneys V2\moneys\Act_EnterItem.java
+* Source Backups\Moneys V2\moneys\Act_History.java
+* Source Backups\Moneys V2\moneys\Act_ImageViewer.java
+* Source Backups\Moneys V2\moneys\Act_Main.java
+* Source Backups\Moneys V2\moneys\Act_TabHost.java
+* Source Backups\Moneys V2\moneys\DBManager.java
+* Source Backups\Moneys V2\moneys\HistoryListViewArrayAdaptor.java
+* Source Backups\Moneys V2\moneys\SoundManager.java
+* Source Backups\Moneys V2\moneys\TransactionRecord.java
+* icon.png
+* mainscnicons.pdn
+* moneys.apk
+* moneysv1.apk
+* proguard-project.txt
+* website\
+* website\User Guide\
+* website\User Guide\Untitled 3.odg
+* website\User Guide\Videos\
+* website\User Guide\Videos\addtofillinlater.avi
+* website\User Guide\addfilllater.jpg
+* website\User Guide\edititem.jpg
+* website\User Guide\enteritem.jpg
+* website\User Guide\enteritem2.jpg
+* website\User Guide\history.jpg
+* website\User Guide\overview.jpg
+* website\User Guide\overview2.jpg
+* website\User Guide\tutorial-edititem.odg
+* website\User Guide\tutorial-enteritem.odg
+* website\User Guide\tutorial-historyscreen.odg
+* website\User Guide\tutorial-overview.odg
+* website\tutorial1.odg
+* website\tutorial2.odg
+* website\tutorial3.odg
+* website\tutorial4.odg
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

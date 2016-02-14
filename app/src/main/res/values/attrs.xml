@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Tab styles -->
+    
+    <attr name="lay_titleBackground" format="reference" />
+	
+    <attr name="lay_textbox" format="reference" />
+	<attr name="lay_pageBackground" format="reference" />
+	<attr name="lay_button_big" format="reference" />
+	<attr name="lay_button_medium" format="reference" />
+	<attr name="textDescription" format="reference" />
+    <attr name="textMoney" format="reference" />
+	
+
+</resources>

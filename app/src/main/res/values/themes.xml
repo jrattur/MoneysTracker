@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="Theme.HandWritten" parent="android:Theme.Light.NoTitleBar">  
+		<item name="lay_pageBackground">@style/backgroundWhite</item>
+		<item name="lay_button_big">@style/buttonHandWritten_Big</item>
+		<item name="lay_button_medium">@style/buttonHandWritten_Medium</item>
+		<item name="textDescription">@android:style/TextAppearance.Large</item>
+		<item name="textMoney">@android:style/TextAppearance.Large</item>
+	</style>
+   
+    <style name="Theme.Modern" parent="android:Theme.Light.NoTitleBar">  
+		<item name="lay_pageBackground">@style/backgroundGrey</item>
+		<item name="lay_button_big">@style/androidButton</item>
+		<item name="lay_button_medium">@style/buttonModern_Medium</item>
+		<item name="textDescription">@android:style/TextAppearance.Large</item>
+		<item name="textMoney">@android:style/TextAppearance.Large</item>
+		<item name="lay_textbox">@style/textbox1</item>
+	</style>
+    
+    <style name="NoTitleDialog" parent="android:style/Theme.Dialog">
+    <item name="android:windowNoTitle">true</item>
+</style>
+    
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_main">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/HistoryButtonDatePrev"
+            style="?attr/lay_button_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="prevButtonClick"
+            android:tag="DatePrev"
+            android:text="PREV" />
+
+        <Spinner
+            android:id="@+id/HistoryDateSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0" />
+
+        <Button
+            android:id="@+id/HistoryButtonDateNext"
+            style="?attr/lay_button_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="nextButtonClick"
+            android:tag="DateNext"
+            android:text="NEXT" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rellayout"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+         >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rellayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/textbox" >
+
+     	<TextView
+            android:id="@+id/history_label_spent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="Money Spent"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+             />
+        
+     	<TextView
+            android:id="@+id/history_label_moneyIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/history_label_spent"
+            android:layout_alignParentLeft="true"
+            android:text="Money In"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+     	
+     	<TextView
+            android:id="@+id/history_label_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/history_label_moneyIn"
+            android:text="Net"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:textStyle="bold"
+             />
+     	
+     	<TextView
+            android:id="@+id/HistoryMoneySpent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="$0.00"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse" />
+
+        <TextView
+            android:id="@+id/HistoryMoneyIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HistoryMoneySpent"
+            android:layout_alignParentRight="true"
+            android:text="$0.00"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+             />
+
+        <TextView
+            android:id="@+id/HistoryMoneyDifference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/HistoryMoneyIn"
+            android:layout_alignParentRight="true"
+            android:text="$0.00"
+            android:textAppearance="?android:attr/textAppearanceMediumInverse"
+            android:textStyle="bold" />
+     	
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageButton
+        android:id="@+id/audioRecorderPlayStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/audioRecorderRecordStopButton"
+        android:layout_alignBottom="@+id/audioRecorderRecordStopButton"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/audioRecorderRecordStopButton"
+        android:src="@drawable/ic_audio_play"
+        android:visibility="invisible"
+        android:tag="STOP"
+         />
+
+    <Button
+        android:id="@+id/audioRecorderCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/audioRecorderPlayStopButton"
+        android:layout_below="@+id/audioRecorderState"
+        android:layout_toRightOf="@+id/audioRecorderPlayStopButton"
+        android:layout_marginLeft="15dp"
+        android:text="CANCEL" />
+
+    <Button
+        android:id="@+id/audioRecorderOKButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/audioRecorderCancelButton"
+        android:layout_below="@+id/audioRecorderState"
+        android:layout_marginLeft="0dp"
+        android:layout_toRightOf="@+id/audioRecorderCancelButton"
+        android:ems="5"
+        android:text="OK"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/audioRecorderState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="STOPPED"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageButton
+        android:id="@+id/audioRecorderRecordStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/audioRecorderState"
+        android:src="@drawable/ic_audio_rec"
+        android:text="RECORD" />
+
+</RelativeLayout>

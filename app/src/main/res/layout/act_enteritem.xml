@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/newbuyscreen_INCENC_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="incEncButton"
+        android:tag="INCEXPTEXT"
+        android:text="EXPENSE" />
+
+    <EditText
+        android:id="@+id/newbuyscreen_TIME_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newbuyscreen_DATE_Button"
+        android:layout_alignTop="@+id/newbuyscreen_DATE_Button"
+        android:layout_toRightOf="@+id/newbuyscreen_DATE_Button"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="time"
+        android:onClick="timeButton"
+        android:text="10:59 pm" />
+
+    <TextView
+        android:id="@+id/newbuyscreen_date_smalltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newbuyscreen_INCENC_textbox"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/newbuyscreen_DATE_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/newbuyscreen_date_smalltext"
+        android:layout_toRightOf="@+id/newbuyscreen_name_smalltext"
+        android:focusable="false"
+        android:inputType="date"
+        android:onClick="dateButton"
+        android:text="11/11/2012" />
+
+    <TextView
+        android:id="@+id/newbuyscreen_name_smalltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newbuyscreen_DATE_Button"
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <AutoCompleteTextView
+        android:id="@+id/newbuyscreen_ITEMNAME_autocompletetextbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newbuyscreen_DATE_Button"
+        android:layout_alignTop="@+id/newbuyscreen_name_smalltext"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/newbuyscreen_price_smalltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newbuyscreen_ITEMNAME_autocompletetextbox"
+        android:layout_toLeftOf="@+id/newbuyscreen_ITEMNAME_autocompletetextbox"
+        android:text="Price"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newbuyscreen_ITEMNAME_autocompletetextbox"
+        android:layout_below="@+id/newbuyscreen_PRICE_textbox" >
+
+        <Button
+            android:id="@+id/newbuyscreen_PRICEp1_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addPrice1"
+            android:tag="PriceButtons"
+            android:text="+1" />
+
+        <Button
+            android:id="@+id/newbuyscreen_PRICEp5_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addPrice2"
+            android:tag="PriceButtons"
+            android:text="+5" />
+
+        <Button
+            android:id="@+id/newbuyscreen_PRICEp10_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addPrice3"
+            android:tag="PriceButtons"
+            android:text="+10" />
+
+        <Button
+            android:id="@+id/newbuyscreen_PRICEp100_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addPrice4"
+            android:tag="PriceButtons"
+            android:text="+100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout3"
+        android:layout_below="@+id/linearLayout3"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/newbuyscreen_deleteTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:onClick="deleteTransaction"
+            android:text="Delete Record"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/newbuyscreen_BUY_or_UPDATE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:onClick="buyOrUpdate"
+            android:text="BUY" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/newbuyscreen_plusMinus_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newbuyscreen_PRICE_textbox"
+        android:layout_below="@+id/newbuyscreen_ITEMNAME_autocompletetextbox"
+        android:layout_toRightOf="@+id/newbuyscreen_price_smalltext"
+        android:src="@drawable/minusncon4"
+        android:onClick="incEncButton" />
+
+    <EditText
+        android:id="@+id/newbuyscreen_PRICE_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newbuyscreen_ITEMNAME_autocompletetextbox"
+        android:layout_toRightOf="@+id/newbuyscreen_plusMinus_icon"
+        android:ems="8"
+        android:inputType="numberDecimal"
+        android:digits="0123456789.,"
+        android:text=""
+         />
+
+    <ImageButton
+        android:id="@+id/newbuyscreen_Photo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout2"
+        android:onClick="onPhotoButton"
+        android:src="@drawable/ic_photo_small2"
+        android:text="Note" />
+
+    <ImageButton
+        android:id="@+id/newbuyscreen_sound_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/newbuyscreen_Photo_btn"
+        android:layout_toRightOf="@+id/newbuyscreen_Photo_btn"
+        android:onClick="onSoundButton"
+        android:src="@drawable/ic_sound_small2"
+        android:text="Sound" />
+
+    <ImageButton
+        android:id="@+id/newbuyscreen_note_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/newbuyscreen_sound_btn"
+        android:layout_toRightOf="@+id/newbuyscreen_sound_btn"
+        android:onClick="onNoteButton"
+        android:src="@drawable/ic_note_small2"
+        android:text="Photo" />
+
+    <ImageView
+        android:id="@+id/newbuyscreen_hasSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newbuyscreen_sound_btn"
+        android:layout_alignRight="@+id/newbuyscreen_sound_btn"
+        android:layout_margin="7dp"
+        android:src="@drawable/ic_greentick" />
+
+    <ImageView
+        android:id="@+id/newbuyscreen_hasNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newbuyscreen_note_btn"
+        android:layout_alignRight="@+id/newbuyscreen_note_btn"
+        android:layout_margin="7dp"
+        android:src="@drawable/ic_greentick" />
+
+    <ImageView
+        android:id="@+id/newbuyscreen_hasPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newbuyscreen_Photo_btn"
+        android:layout_alignRight="@+id/newbuyscreen_Photo_btn"
+        android:layout_margin="7dp"
+        android:src="@drawable/ic_greentick" />
+
+</RelativeLayout>
